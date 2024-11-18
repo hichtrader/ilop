@@ -1,0 +1,61 @@
+{
+    "name": "ikoa-web",
+    "description": "This app runs iKOA on heroku",
+    "keywords": [
+        "heroku",
+        "iKOA",
+        "google drive"
+    ],
+    "repository": "https://github.com/mason1901/ikoa-web",
+    "env": {
+        "TEAM_DRIVE_ID": {
+            "description": "the ID of the team drive"
+        },
+        "SA_JSON_1": {
+            "description": "follow the tips and FAQ in README.md"
+        },
+        "SA_JSON_2": {
+            "description": "follow the tips and FAQ in README.md"
+        },
+        "RCLONE_DESTINATION": {
+            "description": "the path where stores the downloaded data,for example:/ikuuu,don't add a \"/\" at the end"
+        },
+        "LOG_PATH": {
+            "description": "the path where stores the downloaded statistic log, start with \"/\", for exmaple: /log"
+        },
+        "adminUser": {
+            "description": "the only user which you can login in the web page"
+        },
+        "adminPassword": {
+            "description": "the password for the admin user,at least 8 characters"
+        },
+        "herokuApp": {
+            "description": "the app url,for example:\"https://appname.herokuapp.com\", don't make mistake"
+        },
+        "SECRET_KEY": {
+            "description": "used for the csrf token, it is an auto generated value",
+            "generator": "secret"
+        },
+        "SERIAL_CODE": {
+            "description": "Please input a valid serial code, otherwise you can't download anything"
+        },
+        "MERGE_BOOL": {
+            "description": "merge if a video containing multiple parts, true or false",
+            "value": "true"
+        },
+        "MONTHLY_ONLY_BOOL": {
+            "description": "Only download videos which belong to monthly, true or false",
+            "value": "true"
+        },
+        "PROMOTION": {
+            "description": "Is there a promotion for ikoa? (true or false)",
+            "value": "false"
+        },
+        "OUTPUT_FILENAME": {
+            "description": "Choose a format to naming the downloaded file, pid or cid or num.",
+            "value": "cid"
+        }
+
+    },
+    "stack": "container"
+}
